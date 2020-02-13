@@ -11,7 +11,8 @@
     "coverage": "nyc npm test",
     "lint-fix": "npm run lint -- --fix",
     "lint": "tslint --project .",
-    "start": "node --require ts-node/register --require source-map-support/register ./index.ts"
+    "start": "node --require ts-node/register --require source-map-support/register ./index.ts",
+    "pretty": "prettier-ts *.ts src/**/* package.json --write"
   },
   "repository": {
     "type": "git",
@@ -29,9 +30,10 @@
     "gq": "github:abondoa/gq"
   },
   "devDependencies": {
-    "@types/node": "^13.7.1",
     "@types/command-line-args": "^5.0.0",
     "@types/command-line-usage": "^5.0.1",
+    "@types/node": "^13.7.1",
+    "prettier-ts": "^1.17.1-2",
     "rimraf": "^3.0.2",
     "ts-node": "^8.3.0",
     "tslint": "^5.18.0",
