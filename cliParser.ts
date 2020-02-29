@@ -44,15 +44,15 @@ export function showCliHelp() {
   console.log(
     commandLineUsage([
       {
-        header: 'GQ',
+        header: 'tikked',
         content: 'A feature flag thingy'
       },
       {
         header: 'Synopsis',
         content: [
           // tslint:disable-next-line: max-line-length
-          `$ gq --root {underline folder} --application-environment {underline string} [--context] {underline contextjson} ...`,
-          '$ gq --help'
+          `$ tkd --root {underline folder} --application-environment {underline string} [--context] {underline contextjson} ...`,
+          '$ tkd --help'
         ]
       },
       {
