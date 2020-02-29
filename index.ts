@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import { ApplicationEnvironmentRepository } from 'gq';
+import { ApplicationEnvironmentRepository } from 'tikked-persistency';
 import { parseCliArgs, showCliHelp } from './cliParser';
 import { createContainer } from './inversify.config';
 

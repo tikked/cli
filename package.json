@@ -26,7 +26,8 @@
   "dependencies": {
     "command-line-args": "^5.1.1",
     "command-line-usage": "^6.0.1",
-    "tikked-core": "github:tikked/core"
+    "tikked-core": "github:tikked/core",
+    "tikked-persistency": "github:tikked/persistency"
   },
   "devDependencies": {
     "@types/command-line-args": "^5.0.0",
