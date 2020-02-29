@@ -1,33 +1,32 @@
 {
-  "name": "gq-cli",
+  "name": "tikked-cli",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "clean": "rimraf dist .nyc_output coverage",
+    "clean": "rimraf dist",
     "count": "cloc --by-file-by-lang src",
     "coverage": "nyc npm test",
     "lint-fix": "npm run lint -- --fix",
     "lint": "tslint --project .",
-    "start": "node --require ts-node/register --require source-map-support/register ./index.ts",
-    "pretty": "prettier-ts *.ts src/**/* package.json --write"
+    "start": "node --require ts-node/register --require source-map-support/register ./index.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abondoa/gq-cli.git"
+    "url": "git+https://github.com/tikked/cli.git"
   },
   "author": "Alex Bondo Andersen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/abondoa/gq-cli/issues"
+    "url": "https://github.com/tikked/cli/issues"
   },
-  "homepage": "https://github.com/abondoa/gq-cli#readme",
+  "homepage": "https://github.com/tikked/cli#readme",
   "dependencies": {
     "command-line-args": "^5.1.1",
     "command-line-usage": "^6.0.1",
-    "gq": "github:abondoa/gq"
+    "tikked-core": "github:tikked/core"
   },
   "devDependencies": {
     "@types/command-line-args": "^5.0.0",
