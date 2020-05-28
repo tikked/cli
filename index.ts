@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import { ApplicationEnvironmentRepository } from 'tikked-persistency';
 import { parseCliArgs, showCliHelp } from './cliParser';
-import { createContainer } from './inversify.config';
+import { createContainer, createContainerRest } from './inversify.config';
 
 const options = parseCliArgs();
 if (options.help) {
@@ -23,9 +23,12 @@ if (missingArgs.length > 0) {
   process.exit(1);
 }
 
-const repo = createContainer(options.root).get<
+const container = /^https?:\/\//.test(options.root)
+  ? createContainerRest(options.root)
+  : createContainer(options.root);
+const repo = container.get<ApplicationEnvironmentRepository>(
   ApplicationEnvironmentRepository
->(ApplicationEnvironmentRepository);
+);
 
 repo.get(options['application-environment']).subscribe({
   next: appEnv => {

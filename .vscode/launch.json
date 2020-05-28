@@ -24,6 +24,27 @@
             ],
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch REST",
+            "runtimeArgs": [
+                "--require",
+                "ts-node/register",
+                "--require",
+                "source-map-support/register"
+            ],
+            "args": [
+                "${workspaceFolder}/index.ts",
+                "-r",
+                "http://localhost:3000",
+                "-a",
+                "ps",
+                "{}"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
         }
     ]
 }
