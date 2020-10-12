@@ -6,13 +6,11 @@
         "attributes": [{
             "id": "userId",
             "name": "User Id",
-            "description": "The id of the user (mongo id)",
-            "weight": 1
+            "description": "The id of the user (mongo id)"
         }, {
             "id": "studyId",
             "name": "Study Id",
-            "description": "The id of the study (mongo id)",
-            "weight": 2
+            "description": "The id of the study (mongo id)"
         }]
     },
     "description": "",
@@ -21,9 +19,6 @@
         "name": "Randomization Module",
         "description": "Indicates whether the randomization module is available",
         "toggles": [{
-            "context": {},
-            "isActive": false
-        },{
             "context": {
                 "userId": "1"
             },
@@ -33,6 +28,9 @@
                 "studyId": "1"
             },
             "isActive": true
+        },{
+            "context": {},
+            "isActive": false
         }]
     },{
         "id": "medication",
@@ -47,14 +45,14 @@
         "name": "AE/SAE Module",
         "description": "Indicates whether the AE/SAE module is available",
         "toggles": [{
-            "context": {},
-            "isActive": false
-        },{
             "context": {
                 "userId": "1",
                 "studyId": "1"
             },
             "isActive": true
+        },{
+            "context": {},
+            "isActive": false
         }]
     }]
 }
